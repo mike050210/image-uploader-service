@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://imagemetadatadbinstance.clsfupqer4hl.us-east-1.rds.amazonaws.com/ImageMetadataDB
+    username: postgres
+    password: postgres
+
+  # Hibernate props
+  #spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+  # spring.jpa.hibernate.dll-auto=create
+
+aws:
+  region: us-east-1
+  s3-bucket-name: image-repo-miguel-osorio
+  sqs-queue-url: https://sqs.us-east-1.amazonaws.com/435142194056/image-uploads-notification-queue
+  sns-topic-arn: arn:aws:sns:us-east-1:435142194056:image-uploads-notification-topic
+  lambda-function-arn: arn:aws:lambda:us-east-1:435142194056:function:image-uploads-batch-notifier

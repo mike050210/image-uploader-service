@@ -1,4 +1,4 @@
-package com.epam.aws.training.service;
+package com.epam.aws.training.service.impl;
 
 import com.epam.aws.training.model.AwsInfoResponse;
 import org.springframework.stereotype.Service;

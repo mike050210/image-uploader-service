@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.epam.aws.training</groupId>
 	<artifactId>aws-test-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.5.1</version>
 	<name>aws-test-service</name>
 	<description>Demo project for Spring Boot running in EC2 instance</description>
 	<properties>
@@ -32,12 +32,53 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
 
 		<!-- AWS Dependencies-->
 		<dependency>
 			<groupId>software.amazon.awssdk</groupId>
 			<artifactId>ec2</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk</artifactId>
+			<version>1.12.191</version>
+		</dependency>
+
+		<!-- DB Dependencies -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.3.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>8.5.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vladmihalcea</groupId>
+			<artifactId>hibernate-types-52</artifactId>
+			<version>2.14.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
